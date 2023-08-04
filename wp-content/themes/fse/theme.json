@@ -1,0 +1,46 @@
+{
+    "version": 2,
+    "settings": {
+        "layout": {
+            "contentSize": "840px",
+            "wideSize": "1100px"
+        },
+        "color": {
+            "palette": [
+                {
+                    "slug": "primary",
+                    "color": "#D1D1E4",
+                    "name": "Primary"
+                },
+                {
+                    "slug": "secondary",
+                    "color": "#E4D1D1",
+                    "name": "Secondary"
+                }
+            ],
+            "gradients": [
+                {
+                    "slug": "primary-to-secondary",
+                    "gradient": "linear-gradinet(160deg, var(--wp--preset--primary), var(--wp--preset--color--secondary))",
+                    "name": "Primary to Secondary"
+                }
+            ],
+            "doutone": [
+                {
+                    "colors":["#1d1f35", "#6cace4"],
+                    "slug": "dark-blue-and-light-blue",
+                    "name": "Dark blue and light blue"
+                },
+                {
+                    "colors": ["#1d1f35", "#c7c0af"],
+                    "slug": "dark-blue-and-beige",
+                    "name": "Dark blue and beige"
+                }
+            ]
+        }
+    }, 
+    "custom": {
+        "spacing": "14px"
+        
+    }
+}
