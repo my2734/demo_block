@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Twenty Twenty-Two functions and definitions
  *
@@ -10,7 +11,7 @@
  */
 
 
-if ( ! function_exists( 'twentytwentytwo_support' ) ) :
+if (!function_exists('twentytwentytwo_support')) :
 
 	/**
 	 * Sets up theme defaults and registers support for various WordPress features.
@@ -19,21 +20,21 @@ if ( ! function_exists( 'twentytwentytwo_support' ) ) :
 	 *
 	 * @return void
 	 */
-	function twentytwentytwo_support() {
+	function twentytwentytwo_support()
+	{
 
 		// Add support for block styles.
-		add_theme_support( 'wp-block-styles' );
+		add_theme_support('wp-block-styles');
 
 		// Enqueue editor styles.
-		add_editor_style( 'style.css' );
-
+		add_editor_style('style.css');
 	}
 
 endif;
 
-add_action( 'after_setup_theme', 'twentytwentytwo_support' );
+add_action('after_setup_theme', 'twentytwentytwo_support');
 
-if ( ! function_exists( 'twentytwentytwo_styles' ) ) :
+if (!function_exists('twentytwentytwo_styles')) :
 
 	/**
 	 * Enqueue styles.
@@ -42,11 +43,13 @@ if ( ! function_exists( 'twentytwentytwo_styles' ) ) :
 	 *
 	 * @return void
 	 */
-	function twentytwentytwo_styles() {
+	function twentytwentytwo_styles()
+	{
+		wp_enqueue_style('bootstrap-css', "https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css");
 		// Register theme stylesheet.
-		$theme_version = wp_get_theme()->get( 'Version' );
+		$theme_version = wp_get_theme()->get('Version');
 
-		$version_string = is_string( $theme_version ) ? $theme_version : false;
+		$version_string = is_string($theme_version) ? $theme_version : false;
 		wp_register_style(
 			'twentytwentytwo-style',
 			get_template_directory_uri() . '/style.css',
@@ -55,13 +58,21 @@ if ( ! function_exists( 'twentytwentytwo_styles' ) ) :
 		);
 
 		// Enqueue theme stylesheet.
-		wp_enqueue_style( 'twentytwentytwo-style' );
-
+		wp_enqueue_style('twentytwentytwo-style');
 	}
 
 endif;
 
-add_action( 'wp_enqueue_scripts', 'twentytwentytwo_styles' );
+add_action('wp_enqueue_scripts', 'twentytwentytwo_styles');
 
 // Add block patterns
 require get_template_directory() . '/inc/block-patterns.php';
+
+// function j0e_enqueue_styles()
+// {
+// 	//css
+// 	wp_enqueue_style('bootstrap-css', "https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css");
+// 	// die("hello ca nha yeu");
+// }
+
+// add_action('wp_enqueue_scripts', 'j0e_enqueue_styles');

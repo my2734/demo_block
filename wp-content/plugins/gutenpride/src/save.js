@@ -19,45 +19,28 @@ import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
  * @return {WPElement} Element to render.
  */
 export default function save({ attributes }) {
-	const redBackground = {
-		backgroundColor: "#900",
-		color: "#fff",
-		padding: '20px',
-	}
-
-	const data = [
-		{
-			"id": 1,
-			"content": "https://images.pexels.com/photos/17593738/pexels-photo-17593738/free-photo-of-hom-bukhara.jpeg?auto=compress&cs=tinysrgb&w=800&lazy=load"
-		},
-		{
-			"id": 2,
-			"content": "https://images.pexels.com/photos/17789334/pexels-photo-17789334/free-photo-of-bi-n-binh-minh-phong-c-nh-hoang-hon.jpeg?auto=compress&cs=tinysrgb&w=800&lazy=load"
-		},
-		{
-			"id": 3,
-			"content": "https://images.pexels.com/photos/16498785/pexels-photo-16498785/free-photo-of-anh-sang-thanh-ph-dan-ong-nh-ng-ng-i.jpeg?auto=compress&cs=tinysrgb&w=800&lazy=load",
-		},
-		// {
-		// 	"id": 4,
-		// 	"content": "https://images.pexels.com/photos/17046572/pexels-photo-17046572/free-photo-of-dan-ba-t-ng-d-ng-trang-ph-c.jpeg?auto=compress&cs=tinysrgb&w=800&lazy=load"
-		// },
-		// {
-		// 	"id": 5,
-		// 	"content": "https://images.pexels.com/photos/17120997/pexels-photo-17120997/free-photo-of-toa-nha-thap-nha-th-ton-giao.jpeg?auto=compress&cs=tinysrgb&w=800&lazy=load",
-		// }
-	]
-	const blockProps = useBlockProps.save({ style: redBackground })
+	const blockProps = useBlockProps.save()
 	return (
-		<div class="image-grid">
-			{/* {data.map(p => (
-				(p.id==1) ? 
-					<img key={p.id} class="image-grid-col-2 image-grid-row-2" src={p.content} alt="architecture" /> : 
-					<img key={p.id} src={p.content} alt="architecture" />
-				
-			))} */}
-			{/* <button className="btn btn-primary">Demo button</button> */}
-			<button className="btn btn-primary">Demo button12121212</button>
-		</div>
+		<>
+			<div class="container">
+				<div class="row">
+					<div class="col-md-3">
+						<div style={{ height: "200px" }}>
+							<img style={{ height: "100%", width: "100%", objectFit: "cover" }} src="https://images.pexels.com/photos/17760623/pexels-photo-17760623/free-photo-of-thanh-ph-toa-nha-van-phong-ki-n-truc.jpeg?auto=compress&cs=tinysrgb&w=800&lazy=load" />
+						</div>
+					</div>
+					<div class="col-md-3">
+						<div style={{ height: "200px" }}>
+							<img style={{ height: "100%", width: "100%", objectFit: "cover" }} src="https://images.pexels.com/photos/17760623/pexels-photo-17760623/free-photo-of-thanh-ph-toa-nha-van-phong-ki-n-truc.jpeg?auto=compress&cs=tinysrgb&w=800&lazy=load" />
+						</div>
+					</div>
+					<div class="col-md-3">
+						<div style={{ height: "200px" }}>
+							<img style={{ height: "100%", width: "100%", objectFit: "cover" }} src="https://images.pexels.com/photos/17760623/pexels-photo-17760623/free-photo-of-thanh-ph-toa-nha-van-phong-ki-n-truc.jpeg?auto=compress&cs=tinysrgb&w=800&lazy=load" />
+						</div>
+					</div>
+				</div>
+			</div>
+		</>
 	)
 }

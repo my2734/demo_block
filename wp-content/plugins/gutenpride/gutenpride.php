@@ -23,32 +23,51 @@
  */
 function create_block_gutenpride_block_init()
 {
+	// wp_enqueue_script("jquery", 'https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js', '1.0', true);
 	// die(plugin_dir_path(__FILE__));
 	// die(get_template_directory_uri());
 	// die(plugin_dir_url(__FILE__));
-	register_block_type(__DIR__ . '/build');
+	// const { getCurrentPostId } = wp.data.select("core/editor");
+	// the_post();
+	$post_id = get_the_ID();
+	register_block_type(
+		__DIR__ . '/build',
+		array(
+			'attributes'      => [
+				'post_id' => [
+					'type'    => 'number',
+					'default' => $post_id,
+				],
+			],
+		)
+	);
 }
 add_action('init', 'create_block_gutenpride_block_init');
 
 
-add_shortcode('shortcode_demo', 'shortcode_demo_shortcode');
+// add_shortcode('shortcode_demo', 'shortcode_demo_shortcode');
 
-function shortcode_demo_shortcode()
-{
-	//js
-	wp_enqueue_media();
-	wp_enqueue_script("jquery", 'https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js', '1.0', true);
-	wp_enqueue_script("zz-shortcode-jscss-script", plugin_dir_url(__FILE__) . 'main.js', array('jquery'), true);
-	//css
-	// return "<button id='demo_button'>Upload image</button>";
-	$html = '<div class="container">
-	<div id="content_image" class="row">
+// function shortcode_demo_shortcode()
+// {
+// 	//js
+// 	wp_enqueue_media();
+// 	wp_enqueue_script("jquery", 'https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js', '1.0', true);
+// 	wp_enqueue_script("zz-shortcode-jscss-script", plugin_dir_url(__FILE__) . 'main.js', array('jquery'), true);
+// 	//css
+// 	// return "<button id='demo_button'>Upload image</button>";
+// 	$html = '<div class="container">
+// 	<div id="content_image" class="row">
 		
-	</div>
-	<div class="text-center mt-5">
-		<button id="demo_button" class="btn btn-primary">Upload image</button>
-	</div>
-</div>';
-	return $html;
-	// return '<h1>Hello ca nha yeu</h1>';
-}
+// 	</div>
+// 	<div class="text-center mt-5">
+// 		<button id="demo_button" class="btn btn-primary">Upload image</button>
+// 	</div>
+// </div>';
+// 	return $html;
+// 	// return '<h1>Hello ca nha yeu</h1>';
+// }
+
+
+// add_action('init', function(){
+// 	die("hello ca nha yeu cua ken");
+// });

@@ -18,6 +18,12 @@
 		"@wordpress/scripts": "^26.9.0"
 	},
 	"dependencies": {
-		"bootstrap": "^5.3.1"
+		"@wordpress/data": "^9.8.0",
+		"@wordpress/hooks": "^3.38.0",
+		"axios": "^1.4.0",
+		"bootstrap": "^5.3.1",
+		"react-draggable": "^4.4.5",
+		"react-sortablejs": "^6.1.4",
+		"sortablejs": "^1.15.0"
 	}
 }
