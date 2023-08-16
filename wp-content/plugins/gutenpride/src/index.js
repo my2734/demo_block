@@ -4,6 +4,7 @@
  * @see https://developer.wordpress.org/block-editor/developers/block-api/#registering-a-block
  */
 import { registerBlockType } from '@wordpress/blocks';
+// import '../assets/bootstrap.min.css';
 
 /**
  * Lets webpack process CSS, SASS or SCSS files referenced in JavaScript files.

@@ -145,7 +145,7 @@ function register_custom_fields()
     //examle
     register_rest_route('car/v1', '/list_image/(?P<post_id>\d+)', array(
         'methods' => 'POST',
-        'callback' => 'create_city_from_data'
+        'callback' => 'update_list_image_media'
     ));
 }
 
@@ -164,15 +164,13 @@ function update_list_image(WP_REST_Request $request)
     return new WP_REST_Response($data);
 }
 
-function create_city_from_data($req)
+function update_list_image_media($req)
 {
 
     $param = $req->get_params();
     $post_id = $param['post_id'];
     $list_image = $param['list_image'];
     update_post_meta($post_id, 'list_image', $list_image);
-    // return $list_image;
-
     $res = new WP_REST_Response($list_image);
     $res->set_status(200);
     return ['list_image' => $res];
@@ -365,12 +363,33 @@ function get_one_thing($request)
 // }
 
 
-add_filter('wp_update_core_button_args', function ($args) {
-    $args['button_text'] = 'Cập nhật ngay bây giờ!';
-    return $args;
-});
+// add_filter('wp_update_core_button_args', function ($args) {
+//     $args['button_text'] = 'Cập nhật ngay bây giờ!';
+//     return $args;
+// });
 
-add_filter('wp_update_core_button_args', function ($args) {
-    $args['button_color'] = 'red';
-    return $args;
-});
+// add_filter('wp_update_core_button_args', function ($args) {
+//     $args['button_color'] = 'red';
+//     return $args;
+// });
+
+
+
+// function add_data_to_block($block)
+// {
+//     // Thêm dữ liệu vào khối.
+//     $block->data['my_data'] = 'This is some data that I added to the block.';
+//     // die("hello ca nha yeu");
+// }
+
+// // Đăng ký hàm xử lý với hook `block_added`.
+// add_action('block_added', 'add_data_to_block');
+
+
+if (!defined('PROJECT_MANAGEMENT_PATH')) {
+    define('PROJECT_MANAGEMENT_PATH', plugin_dir_path(__FILE__));
+}
+
+require_once(PROJECT_MANAGEMENT_PATH . 'shortcode/shortcode_init.php');
+
+new shortcodeInit();

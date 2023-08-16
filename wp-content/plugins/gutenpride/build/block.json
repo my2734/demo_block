@@ -13,15 +13,9 @@
       "source": "text",
       "selector": "div"
     },
-    "content": {
-      "type": "string",
-      "source": "html",
-      "selector": "p"
-    }
-  },
-  "example": {
-    "attributes": {
-      "content": "Hello world"
+    "list_image": {
+      "type": "array",
+      "default": []
     }
   },
   "supports": {

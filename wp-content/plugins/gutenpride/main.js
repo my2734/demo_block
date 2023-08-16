@@ -1,7 +1,7 @@
 // $(document).ready(
 //     console.log("hello ca nha yeu nha")
 // )
-
+import 'bootstrap/scss';
 jQuery(document).ready(function ($) {
 
     var mediaUploader = wp.media({

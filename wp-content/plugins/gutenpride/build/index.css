@@ -14,8 +14,71 @@
   border: 0;
 }
 
-.backgroundColor {
-  background: red;
+.coverImage {
+  height: 200px;
+  position: relative;
+}
+
+.coverImageUpload {
+  height: 200px;
+  position: relative;
+}
+
+.itemImage {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.itemImage img {
+  /* position: relative; */
+}
+
+.coverImage:hover {
+  opacity: 0.4;
+}
+
+.coverImage:hover .coverIcon {
+  display: block;
+}
+
+.coverIcon {
+  position: absolute;
+  top: 35%;
+  left: 47%;
+  font-size: 30px;
+  color: #fff;
+  display: none;
+  cursor: pointer;
+}
+
+.coverIconUpload {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  padding-left: 10px;
+}
+
+.circleIcon:hover {
+  background-color: #f0f2f3;
+}
+
+.circleIcon {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  border: 1px solid #999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #999;
+}
+
+.circleIcon i {
+  font-size: 20px;
 }
 /*!*******************************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[2].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[2].use[2]!./node_modules/bootstrap/dist/css/bootstrap.min.css ***!

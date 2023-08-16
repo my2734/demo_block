@@ -59,6 +59,8 @@ if (!function_exists('twentytwentytwo_styles')) :
 
 		// Enqueue theme stylesheet.
 		wp_enqueue_style('twentytwentytwo-style');
+
+		wp_enqueue_script('bootstrap5-js','https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js');
 	}
 
 endif;
