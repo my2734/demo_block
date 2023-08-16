@@ -741,7 +741,7 @@ function save({
   }
   return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
     className: "container mt-4"
-  }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
+  }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("h1", null, "Hello ca nha yeu cua ken"), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
     className: "row py-1",
     id: "coverGallery"
   }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
@@ -761,40 +761,7 @@ function save({
       height: "100%",
       backgroundImage: `url('${srcFirstImage}')`
     }
-  })), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
-    className: "col-6",
-    id: "colRight",
-    style: {
-      overflow: "hidden"
-    }
-  }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
-    className: "row",
-    id: "otherImage"
-  }, (() => {
-    let imageItem = [];
-    for (let i = 1; i < blocks.length; i++) {
-      let mediaSource = blocks[i];
-      let srcImage = "";
-      if (mediaSource.file.includes('http')) {
-        srcImage = mediaSource.file;
-      } else {
-        srcImage = 'http://localhost/block_demo/wp-content/uploads/' + mediaSource.file;
-      }
-      imageItem.push((0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
-        className: "col-6 position-relative custom-padding"
-      }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
-        "data-media-path": srcImage,
-        "data-bs-toggle": "modal",
-        "data-bs-target": "#exampleModal",
-        className: "mediaItem image-item",
-        style: {
-          backgroundImage: "url('" + srcImage + "')"
-        }
-      })));
-      if (i == 4) break;
-    }
-    return imageItem;
-  })()))), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
+  }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
     className: "modal fade",
     id: "exampleModal",
     tabindex: "-1",
@@ -819,7 +786,7 @@ function save({
     id: "mainMediaContent"
   }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("img", {
     class: "image-item-main",
-    src: "https://images.pexels.com/photos/17907002/pexels-photo-17907002/free-photo-of-tay-may-nh-nhi-p-nh-d-ng.jpeg?auto=compress&cs=tinysrgb&w=800&lazy=load",
+    src: srcImage,
     alt: ""
   })), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("span", {
     className: "position-absolute custom-next"
@@ -833,7 +800,81 @@ function save({
     className: "splide__track"
   }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("ul", {
     className: "splide__list"
-  }))))))))));
+  }))))))))), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
+    className: "col-6",
+    id: "colRight",
+    style: {
+      overflow: "hidden"
+    }
+  }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
+    className: "row",
+    id: "otherImage"
+  }, (() => {
+    let otherImageRight = [];
+    for (let i = 1; i < blocks.length; i++) {
+      let mediaSource = blocks[i];
+      let srcImage = "";
+      if (mediaSource.file.includes('http')) {
+        srcImage = mediaSource.file;
+      } else {
+        srcImage = 'http://localhost/block_demo/wp-content/uploads/' + mediaSource.file;
+      }
+      let id_modal1 = "modal" + i;
+      let id_modal2 = "#modal" + i;
+      otherImageRight.push((0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
+        className: "col-6 position-relative custom-padding"
+      }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
+        "data-media-path": srcImage,
+        "data-bs-toggle": "modal",
+        "data-bs-target": id_modal2,
+        className: "mediaItem image-item",
+        style: {
+          backgroundImage: "url('" + srcImage + "')"
+        }
+      }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
+        className: "modal fade",
+        id: id_modal1,
+        tabindex: "-1",
+        "aria-labelledby": "exampleModalLabel",
+        "aria-hidden": "true"
+      }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
+        className: "modal-dialog modal-dialog-centered"
+      }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
+        className: "modal-content bg-transparent",
+        style: "border: none"
+      }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
+        className: "modal-body"
+      }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
+        className: "coverSlider",
+        style: "width: 100%;overflow: hidden;"
+      }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("span", {
+        className: "position-absolute custom-previous"
+      }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_3__.FontAwesomeIcon, {
+        icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_4__.faChevronLeft
+      })), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
+        className: "position-relative",
+        id: "mainMediaContent"
+      }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("img", {
+        class: "image-item-main",
+        src: srcImage,
+        alt: ""
+      })), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("span", {
+        className: "position-absolute custom-next"
+      }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_3__.FontAwesomeIcon, {
+        icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_4__.faChevronRight
+      })), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("section", {
+        id: "thumbnail-carousel",
+        className: "splide mt-4",
+        "aria-label": "The carousel with thumbnails. Selecting a thumbnail will change the Beautiful Gallery carousel."
+      }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
+        className: "splide__track"
+      }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("ul", {
+        className: "splide__list"
+      }))))))))));
+      if (i == 4) break;
+    }
+    return otherImageRight;
+  })())))));
 }
 
 /***/ }),
