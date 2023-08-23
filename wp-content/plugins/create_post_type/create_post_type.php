@@ -166,7 +166,6 @@ function update_list_image(WP_REST_Request $request)
 
 function update_list_image_media($req)
 {
-
     $param = $req->get_params();
     $post_id = $param['post_id'];
     $list_image = $param['list_image'];
@@ -174,9 +173,8 @@ function update_list_image_media($req)
     $res = new WP_REST_Response($list_image);
     $res->set_status(200);
     return ['list_image' => $res];
+    return $param;
 }
-
-
 
 
 function get_list_image($car, $field_name, $request = "")
@@ -393,3 +391,46 @@ if (!defined('PROJECT_MANAGEMENT_PATH')) {
 require_once(PROJECT_MANAGEMENT_PATH . 'shortcode/shortcode_init.php');
 
 new shortcodeInit();
+
+
+
+// add_action('init', function () {
+//     // Register the block type
+//     register_block_type('my-block', [
+//         // The block name
+//         'name' => 'My Block',
+
+//         // The block description
+//         'description' => 'This is my block.',
+
+//         // The block category
+//         'category' => 'common',
+
+//         // The block attributes
+//         'attributes' => [
+//             'color' => [
+//                 'type' => 'string',
+//                 'default' => '#000000',
+//             ],
+//             'font_size' => [
+//                 'type' => 'number',
+//                 'default' => 16,
+//             ],
+//         ],
+
+//         // The block view
+//         'view' => function ($block, $attributes, $content) {
+//             // Get the block attributes
+//             $color = $attributes['color'];
+//             $font_size = $attributes['font_size'];
+
+//             // Render the block
+//             return sprintf(
+//                 /* translators: %1$s is the color, %2$s is the font size */
+//                 __('<div style="color: %1$s; font-size: %2$spx;">This is my block!</div>', 'my-plugin'),
+//                 $color,
+//                 $font_size
+//             );
+//         }
+//     ]);
+// });

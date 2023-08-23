@@ -78,3 +78,5 @@ require get_template_directory() . '/inc/block-patterns.php';
 // }
 
 // add_action('wp_enqueue_scripts', 'j0e_enqueue_styles');
+
+

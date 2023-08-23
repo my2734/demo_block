@@ -21,6 +21,10 @@
  * @see https://developer.wordpress.org/reference/functions/register_block_type/
  */
 function create_block_mediaimage_block_init() {
-	register_block_type( __DIR__ . '/build' );
+	register_block_type( __DIR__ . '/build',array('render_callback'=>'demo') );
 }
 add_action( 'init', 'create_block_mediaimage_block_init' );
+
+function demo($attributes, $content, $block){
+	return $content;
+}

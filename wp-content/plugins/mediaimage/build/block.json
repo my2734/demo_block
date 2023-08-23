@@ -12,6 +12,18 @@
       "type": "string",
       "source": "text",
       "selector": "div"
+    },
+    "align": {
+      "type": "string",
+      "default": "center center"
+    },
+    "textAlign": {
+      "type": "string",
+      "default": "left"
+    },
+    "status": {
+      "type": "string",
+      "default": "false"
     }
   },
   "supports": {
@@ -20,5 +32,7 @@
   "textdomain": "mediaimage",
   "editorScript": "file:./index.js",
   "editorStyle": "file:./index.css",
-  "style": "file:./style-index.css"
+  "style": "file:./style-index.css",
+  "viewScript": "file:./view.js",
+  "render": "file:./render.php"
 }

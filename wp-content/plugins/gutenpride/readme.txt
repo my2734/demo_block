@@ -6,7 +6,7 @@ Stable tag:        0.1.0
 License:           GPL-2.0-or-later
 License URI:       https://www.gnu.org/licenses/gpl-2.0.html
 
-A Gutenberg block to show your pride! This block enables you to type text and style it with the color font Gilbert from Type with Pride.
+Example block scaffolded with Create Block tool.
 
 == Description ==
 

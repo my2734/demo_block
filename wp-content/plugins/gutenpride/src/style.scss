@@ -5,18 +5,11 @@
  * Replace them with your own styles or remove the file completely.
  */
 
-@font-face {
-	font-family: Gilbert;
-	src: url(../assets/gilbert-color.otf);
-	font-weight: 700;
+.wp-block-twitch-gutenpride {
+	background-color: #21759b;
+	color: #fff;
+	padding: 2px;
 }
-
-.wp-block-create-block-gutenpride {
-	font-family: Gilbert, sans-serif;
-	font-size: 64px;
-}
-
-
 .image-item-main {
 	height: 100%;
 	width: 100%;
@@ -233,10 +226,3 @@
 	opacity: 1;
 }
 
-.custom-previous svg{
-	width: 10px;
-}
-
-.custom-next svg{
-	width: 10px;
-}

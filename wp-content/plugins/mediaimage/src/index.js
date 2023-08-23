@@ -21,6 +21,7 @@ import './editor.scss';
  */
 import Edit from './edit';
 import save from './save';
+import view from './view';
 import metadata from './block.json';
 
 /**
@@ -40,10 +41,11 @@ registerBlockType( metadata.name, {
 	/**
 	 * @see ./edit.js
 	 */
+	view: view,
 	edit: Edit,
 
 	/**
 	 * @see ./save.js
 	 */
-	save,
+	save:save,
 } );

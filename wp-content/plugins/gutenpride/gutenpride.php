@@ -1,17 +1,16 @@
 <?php
-
 /**
  * Plugin Name:       Gutenpride
- * Description:       A Gutenberg block to show your pride! This block enables you to type text and style it with the color font Gilbert from Type with Pride.
- * Version:           0.1.0
+ * Description:       Example block scaffolded with Create Block tool.
  * Requires at least: 6.1
  * Requires PHP:      7.0
+ * Version:           0.1.0
  * Author:            The WordPress Contributors
  * License:           GPL-2.0-or-later
  * License URI:       https://www.gnu.org/licenses/gpl-2.0.html
  * Text Domain:       gutenpride
  *
- * @package           create-block
+ * @package           twitch
  */
 
 /**
@@ -21,15 +20,16 @@
  *
  * @see https://developer.wordpress.org/reference/functions/register_block_type/
  */
-function create_block_gutenpride_block_init()
-{
-	register_block_type(__DIR__ . '/build');
+function twitch_gutenpride_block_init() {
+	register_block_type( __DIR__ . '/build' );
 }
-add_action('init', 'create_block_gutenpride_block_init');
+add_action( 'init', 'twitch_gutenpride_block_init' );
 
 
+ // Add bootstrap to admin page 
+ add_action('admin_enqueue_scripts','enqueue_bootstrap_admin');
 
-function enqueue_bootstrap_admin_style() {
-    wp_enqueue_style('bootstrap', 'https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css');
+function enqueue_bootstrap_admin() {
+	wp_enqueue_style( 'bootstrap-css', 'https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css' ); 
+	wp_enqueue_script('bootstrap-js', 'https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js');
 }
-add_action('admin_enqueue_scripts', 'enqueue_bootstrap_admin_style');
